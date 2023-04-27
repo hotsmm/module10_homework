@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 10_1</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            display: block;
+        }
+
+        h1 {
+            color: orangered;
+            font-style: italic;
+            text-align: center;
+            margin-top: 40px;
+       }
+
+        .btn {
+            text-align: center;
+            justify-content: center;
+            color: white;
+            margin-top: 70px;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            webkit-tap-highlight-color: transparent;
+            box-shadow: .5px;
+            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: 3px;
+            font-style: italic;
+            line-height: 15px;
+            text-transform: uppercase;
+            color: white;
+            background: seagreen;
+            transition: 0.3s; 
+            position: relative;
+            left: 40%;
+        } 
+
+        .btn:hover {
+            box-shadow: 0px 2px 8px 2px rgba(141, 150, 178, .3);
+            transform: scale(1.05);
+        }
+    
+        .div-icon .svg-from {
+            display: block;
+        }
+
+        .div-icon .svg-to {
+            display: none;
+        }
+
+        .div-icon.div-icon--toggle .svg-from {
+            display: none;
+        }
+
+        .div-icon.div-icon--toggle .svg-to {
+            display: block;
+        }
+
+        .div-icon svg {
+            margin-top: 6px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Работа с SVG</h1>
+      <button class="btn div-icon">
+        <div class="btn_text">Имитация запроса данных</div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-arrow-down-left-circle" viewBox="0 0 16 16">
+            <path class="svg-from" fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-5.904-2.854a.5.5 0 1 1 .707.708L6.707 9.95h2.768a.5.5 0 1 1 0 1H5.5a.5.5 0 0 1-.5-.5V6.475a.5.5 0 1 1 1 0v2.768l4.096-4.097z"/>
+            <path class="svg-to" d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-5.904-2.803a.5.5 0 1 1 .707.707L6.707 10h2.768a.5.5 0 0 1 0 1H5.5a.5.5 0 0 1-.5-.5V6.525a.5.5 0 0 1 1 0v2.768l4.096-4.096z"/>
+        </svg>
+        </button>
+    <script>
+        document.querySelector('.div-icon').addEventListener('click', function(e) {
+    e.target.closest('.div-icon').classList.toggle('div-icon--toggle');
+  })
+    </script>
+</body>
+</html>
