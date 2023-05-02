@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 3</title>
+    <style>
+        body {
+          display: flex;
+          justify-content: center;
+          margin-top: 40px;
+        }
+
+       .container {
+          width: 380px;
+          height: 300px;
+       }
+
+       .head {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          height: 30px;
+          border: 3px solid blue;
+       }
+
+       .content {
+          margin-top: 5px;
+          width: 374px;
+          height: 300px;
+          border: 3px solid blue;
+       }
+
+       .info_output {
+          height: 30px;
+          color: grey;
+          font-style: italic;
+       }
+
+      .chat_output {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .chat_output .recieved {
+        padding: 5px;
+        margin: 10px;
+        align-self: flex-start;
+        color: white;
+        background-color:blue;
+        border-radius: 5px;
+      }
+
+      .chat_output .sent {
+        padding: 5px;
+        margin: 10px;
+        align-self: flex-end;
+        color: white;
+        background-color:green;
+        border-radius: 5px;
+      }
+
+      .chat_output {
+         height: 300px;
+         overflow-y: scroll;
+         position: relative;
+         display: flex;
+         flex-wrap: nowrap;
+         flex-direction: column;
+      }
+
+      p {
+        display: flex;
+        flex-direction: column;
+       }
+
+      .geo-link {
+        padding: 5px;
+        margin: 10px;
+        align-self: flex-end;
+        text-decoration: none;
+        color: white;
+        background-color:brown;
+        border-radius: 5px;
+      }
+ 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="info_output"></div>
+        <div class="head">
+           <input class="input" type="text" placeholder="введите текст сообщения">
+           <button type="submit" class="btn-sent">Отправить</button>
+           <button type="submit" id="btn-geo">Гео-локация</button>
+        </div>
+            <div class="content" id="chat">
+                <div class="chat_output"></div>
+            </div>
+        </div>
+    <script src="./10_3.js"></script>
+</body>
+</html>
